@@ -1,0 +1,69 @@
+{
+  "nodes": {
+    "bitcoinj": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778380906,
+        "narHash": "sha256-RzpO9c1bUfmeROFqNkchteSdw7UY275oOONrCVD6ky8=",
+        "owner": "msgilligan",
+        "repo": "bitcoinj-flake",
+        "rev": "3fa92435d93a20ec01c3bdeac0a0e39d532a2324",
+        "type": "github"
+      },
+      "original": {
+        "owner": "msgilligan",
+        "repo": "bitcoinj-flake",
+        "type": "github"
+      }
+    },
+    "bouncy-castle": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778377596,
+        "narHash": "sha256-R/Wj7SHKTAWjVRKfKLrYjeycrq7c9wjIEeO6ReXuOBI=",
+        "owner": "msgilligan",
+        "repo": "bc-java-flake",
+        "rev": "dbbc5837bce3d2d7726988b37c698ccf6cc44762",
+        "type": "github"
+      },
+      "original": {
+        "owner": "msgilligan",
+        "repo": "bc-java-flake",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1778378379,
+        "narHash": "sha256-X7TcK77Lz8UY6nqiNTv+tPvAdwlUhQWw3KjsJd0SvEk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "ebd4ed760b5c24e37284e2f28c8ac20e9803a86b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "release-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "bitcoinj": "bitcoinj",
+        "bouncy-castle": "bouncy-castle",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
