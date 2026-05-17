@@ -1,5 +1,5 @@
 {
-  description = "bitcoinj devshell";
+  description = "bitcoinj classpath devshell";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-25.11";
@@ -15,7 +15,7 @@
 
   outputs = inputs @ { nixpkgs, bitcoinj, bouncy-castle, ... }:
     let
-      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
+      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forEachSystem = f: builtins.listToAttrs (map (system: {
         name = system;
         value = f system;
@@ -28,6 +28,7 @@
           inherit system;
         };
         in {
+        # This is a devShell that simply puts bitcoinj and its dependencies on the classpath
         default = pkgs.mkShell {
           packages = with pkgs ; [
                 pkgs.jdk25
